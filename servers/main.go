@@ -1,20 +1,18 @@
 package main
 
 import (
-	//	"github.com/davecgh/go-spew/spew"
-	"server"
+	"github.com/zebra88/libs/servers"
 )
 
 func main() {
-	//	server.Init()
-	//	spew.Dump(_default_pool)
-	if server.GetService("/backends/snowflake") == nil {
+	servers.Init()
+	if server.GetService("/backends/xue") == nil {
 		log.Println("get service failed")
 	} else {
 		log.Println("get service succeed")
 	}
 
-	if GetServiceWithId("/backends/snowflake", "snowflake1") == nil {
+	if GetServiceWithId("/backends/xue", "xue0") == nil {
 		log.Println("get service with id failed")
 	} else {
 		log.Println("get service with id succeed")
